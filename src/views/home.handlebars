@@ -1,0 +1,78 @@
+<main class="container">
+  <section class="card">
+    <div class="header">
+      <p class="tag">User Management</p>
+      <h1>Create a New User</h1>
+      <p class="description">
+        Complete the form below to create a user account. If everything is correct,
+        the user will be saved in the database and a success message will appear.
+      </p>
+    </div>
+
+    <form id="registerForm" class="form">
+      <div class="form-row">
+        <input type="text" name="first_name" placeholder="First name" required>
+        <input type="text" name="last_name" placeholder="Last name" required>
+      </div>
+
+      <input type="email" name="email" placeholder="Email address" required>
+
+      <div class="form-row">
+        <input type="number" name="age" placeholder="Age" required>
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+
+      <button type="submit">Create User</button>
+    </form>
+    <section class="login-section">
+  <h2>Login User</h2>
+
+  <p class="description">
+    Log in with a registered email and password. If the data is correct, the JWT cookie will be saved.
+  </p>
+
+  <form id="loginForm" class="form">
+    <input type="email" name="email" placeholder="Email address" required>
+    <input type="password" name="password" placeholder="Password" required>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <div id="loginMessage" class="message"></div>
+
+  <button id="currentBtn" class="secondary-button">
+    Get Current User
+  </button>
+
+  <pre id="currentResult" class="result-box"></pre>
+  </section>
+
+    <div id="message" class="message"></div>
+
+    <section class="info">
+      <h2>Available Actions</h2>
+
+      <div class="actions">
+        <div class="action-card">
+          <span>POST</span>
+          <p>/api/sessions/register</p>
+        </div>
+
+        <div class="action-card">
+          <span>POST</span>
+          <p>/api/sessions/login</p>
+        </div>
+
+        <div class="action-card">
+          <span>GET</span>
+          <p>/api/sessions/current</p>
+        </div>
+
+        <div class="action-card">
+          <span>GET</span>
+          <p>/api/users</p>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
